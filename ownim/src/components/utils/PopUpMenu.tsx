@@ -1,59 +1,28 @@
-import * as React from 'react';
-import Menu from '@mui/material/Menu';
-import MenuItem from '@mui/material/MenuItem';
-import Fade from '@mui/material/Fade';
+import {Button, Menu, MenuItem, MenuTrigger, Popover} from 'react-aria-components';
+import "../../styles/Menue.css"
+import { usePathname, useRouter } from 'next/navigation';
 import Link from 'next/link';
 
 
-type MenuProps = {
-    children: React.ReactNode; // Accepts any valid React node
-  };
-
-const FadeMenu  :React.FC<MenuProps> = ({children}) => {
-
-  const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
-  const open = Boolean(anchorEl);
-  const handleClick = (event: React.MouseEvent<HTMLElement>) => {
-    setAnchorEl(event.currentTarget);
-  };
-  const handleClose = () => {
-    setAnchorEl(null);
-
-  };
-
-  return (
-    <div>
-      <div
-        id="fade-button"
-        aria-controls={open ? 'fade-menu' : undefined}
-        aria-haspopup="true"
-        aria-expanded={open ? 'true' : undefined}
-        onClick={handleClick}
-        style={{alignContent:'flex-start', justifySelf:'left'}}
-      >
-        {children}
-      </div>
-      <Menu
-        id="fade-menu"
-        MenuListProps={{
-          'aria-labelledby': 'fade-button',
-        }}
-        anchorEl={anchorEl}
-        open={open}
-        onClose={handleClose}
-        TransitionComponent={Fade}
-      >
-        <MenuItem onClick={handleClose }> <Link href={"/services/jenitorials"}>Jenitorials</Link></MenuItem>
-        <MenuItem onClick={handleClose}><Link href={"/services/stainless"}>Stainless Steel</Link> </MenuItem>
-        <MenuItem onClick={handleClose}><Link href={"/services/leather"}>Leather</Link></MenuItem>
-        <MenuItem onClick={handleClose}><Link href={"/services/flexo"}>Flexo Printing</Link></MenuItem>
-        <MenuItem onClick={handleClose}><Link href={"/services/gravure"}>Gravure Printing</Link></MenuItem>
-        <MenuItem onClick={handleClose}><Link href={"/services/offset"}>Offset Printing</Link></MenuItem>
-        <MenuItem onClick={handleClose}><Link href={"/services/logistics"}>Logistics</Link></MenuItem>
-        <MenuItem onClick={handleClose}><Link href={"/services/software"}>Software & Digital Marketing Services</Link></MenuItem>
-      </Menu>
-    </div>
-  );
+const FadeMenu   = () =>{
+const currentPath = usePathname();
+const router = useRouter();
+return(
+<MenuTrigger  >
+  <Button aria-label="Menu"><p style={{color:currentPath.includes("/services") ? "#e91e63":"black"}} >Services</p></Button>
+  <Popover style={{maxHeight:'inherit', boxSizing:'border-box', overflow:'auto',padding:2, minWidth:150, outline:'none', zIndex:1, backgroundColor:'white' }} >
+    <Menu>
+      <MenuItem onAction={() => router.push('/services/jenitorials') } > <Link href={"#"}>Jenitorials</Link> </MenuItem>
+      <MenuItem onAction={() => router.push('/services/leather')}><Link href={"#"}>Leather</Link></MenuItem>
+      <MenuItem onAction={() => router.push('/services/stainless')}><Link href={"#"}>Stainless Steel</Link></MenuItem>
+      <MenuItem onAction={() => router.push('/services/flexo')}><Link href={"#"}>Flexo Printing</Link></MenuItem>
+      <MenuItem onAction={() => router.push('/services/gravure')}><Link href={"#"}>Gravure Printing</Link></MenuItem>
+      <MenuItem onAction={() => router.push('/services/offset')}><Link href={"#"}>Offset Printing</Link></MenuItem>
+      <MenuItem onAction={() => router.push('/services/logistics')}><Link href={"#"}>Logistics</Link></MenuItem>
+      <MenuItem onAction={() => router.push('/services/software')}><Link href={"#"}>Software & Digital Marketing</Link></MenuItem>
+    </Menu>
+  </Popover>
+</MenuTrigger>
+)
 }
-
 export default FadeMenu;

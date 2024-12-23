@@ -5,7 +5,6 @@ import { AiFillProfile } from "react-icons/ai";
 import { usePathname } from "next/navigation";
 import ActionBarImage from "./ActionbarImage";
 import FadeMenu from '../utils/PopUpMenu'
-
 const Navbar = () => {
   const currentPath = usePathname();
   return (
@@ -21,12 +20,12 @@ const Navbar = () => {
                 </Link>
               </li>
               <li style={{width:80}} >
-                <Link href="#">
+                <div >
                 <MdMiscellaneousServices  color={currentPath.includes("/services") ? "#e91e63":"black"} size={24} style={{marginLeft:11}} />
-                  <FadeMenu>
-                  <p style={{color:currentPath.includes("/services") ? "#e91e63":"black"}} >Services</p>
-                  </FadeMenu>
-                </Link>
+                  <FadeMenu/>
+              
+                  
+                </div>
               </li>
               <li style={{width:80}} >
                 <Link href="/about">
