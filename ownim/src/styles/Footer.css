@@ -70,6 +70,7 @@
     align-self:left ;
     align-content:flex-start;
     color:white;
+    margin: 4px 32px;
 }
 
 .heading-mobile {
@@ -88,7 +89,6 @@
 
 .detailed-text {
     cursor: pointer;
-    margin: 8px 0;
     font-size: 14px;
     text-decoration: underline;
     margin: 4px 32px;

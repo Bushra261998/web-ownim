@@ -21,7 +21,7 @@ export default function Footer() {
     const router = useRouter();
     const isMobile =useIsMobile();
     const windowWidth = useWindowSize().width;
-    const ColSize = isMobile?1: (windowWidth/5)-130;
+    const ColSize = isMobile?1: (windowWidth/5)-200;
     return (
         <div className="footer">
                 
@@ -32,7 +32,7 @@ export default function Footer() {
             <div  className="footerBody" style={{gap:2}}>
 
             <div className={ isMobile?"services-mobile":"services"} >
-                <div  className={isMobile?"heading-mobile" : "heading"}>{FooterContent.servicesTxt}</div>
+                <div  className={isMobile?"heading-mobile" : "heading-web"}>{FooterContent.servicesTxt}</div>
                 <p className={isMobile?"detailed-text-mobile" :"detailed-text"} > <Link href={"/services/gravure"}>{FooterContent.gravureLink}</Link></p>
                 <p className={isMobile?"detailed-text-mobile" :"detailed-text"} > <Link href={"/services/flexo"}>{FooterContent.flexoLink}</Link> </p>
                 <p className={isMobile?"detailed-text-mobile" :"detailed-text"}><Link href={"/services/offset"}>{FooterContent.offsetLink}</Link> </p>
@@ -41,20 +41,20 @@ export default function Footer() {
             </div>
 
             <div className={ isMobile?"services-mobile":"services"}  style={{marginLeft:ColSize}} >
-                <div  className={isMobile?"heading-mobile" : "heading"}>{FooterContent.productText}</div>
+                <div  className={isMobile?"heading-mobile" : "heading-web"}>{FooterContent.productText}</div>
                 <p className={isMobile?"detailed-text-mobile" :"detailed-text"}><Link href={"/services/leather"}>{FooterContent.leatherLink}</Link></p>
                 <p className={isMobile?"detailed-text-mobile" :"detailed-text"} ><Link href={"/services/stainless"}>{FooterContent.stainlessteelLink}</Link></p>
                 <p className={isMobile?"detailed-text-mobile" :"detailed-text"} ><Link href={"/services/jenitorials"}>{FooterContent.janitorialsLink}</Link></p>
             </div> 
             <div className={ isMobile?"services-mobile":"services"} style={{marginLeft:ColSize}}>
-                <div className={isMobile?"heading-mobile" : "heading"}>{FooterContent.quickLinksTxt}</div>
+                <div className={isMobile?"heading-mobile" : "heading-web"}>{FooterContent.quickLinksTxt}</div>
                 <p className={isMobile?"detailed-text-mobile" :"detailed-text"}><Link href={"/"}>{FooterContent.homeLink}</Link></p>
                 <p className={isMobile?"detailed-text-mobile" :"detailed-text"} ><Link href={"/about"}>{FooterContent.aboutLink}</Link></p>
                 <p className={isMobile?"detailed-text-mobile" :"detailed-text"} ><Link href={"/contact"}>{FooterContent.contactLink}</Link></p>
             </div>
 
             <div className={ isMobile?"services-mobile":"services"} style={{marginLeft:isMobile?ColSize+20:ColSize,marginRight:isMobile?0:20 }}>
-                <div className={isMobile?"heading-mobile" : "heading"}>Contact Us</div>
+                <div className={isMobile?"heading-mobile" : "heading-web"}>Contact Us</div>
 
                 <div className={isMobile?"contact-info-mobile": "contact-info"}>
                     <FaRegEnvelope  size={isMobile?16:18} color="white"  className={isMobile?"icon-mobile":"icon"} />
