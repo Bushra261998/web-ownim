@@ -17,7 +17,8 @@ const NavbarMobile = () => {
       <div  style={{backgroundColor:'white'}} >
         <div  >
           <nav  >
-            <ul   style={{paddingTop:15, marginLeft:10, alignContent:'center', display:'flex', flexDirection:'row'}} >
+          <ActionBarImage/>
+            <ul   style={{paddingTop:5, marginLeft:10, alignContent:'center', display:'flex', flexDirection:'row'}} >
               <li style={{width:tabWidth,display:'inline'}} >
                 <Link href="/">
                 <MdHome color={currentPath== "/" ? "#e91e63":"black"} size={24} style={{marginLeft:5}} />
@@ -45,7 +46,6 @@ const NavbarMobile = () => {
                 </Link>
               </li>
             </ul>
-            <ActionBarImage/>
           </nav>
       
         </div>

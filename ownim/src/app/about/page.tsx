@@ -17,7 +17,7 @@ export default function about() {
               <h2 className="header-text2">ABOUT OUR COMPANY</h2>
           </div>
           <hr className="line" />
-          
+          <div style={{backgroundColor:'#f5f5f5'}}>
           <section>
               <h3 className="about-heading">{AboutUs.aboutUsHeading}</h3>
               <p className="about-text">{AboutUs.aboutUsText}</p>
@@ -32,13 +32,15 @@ export default function about() {
               <h3 className="heading">{AboutUs.ourMissionHeading}</h3>
               <p className="text">{AboutUs.ourMissionText}</p>
           </section>
+          </div>
           
           <Image
               src={aboutus} 
               alt="About Us"
               className="img"
-              width={200}
-              height={200}
+              width={600}
+              height={600}
+              style={{width:'100%'}}
           />
           
       </div>

@@ -52,27 +52,31 @@
     margin-left: 0px;
 }
 
-.text {
+.text-web {
     font-size: 14px;
     margin-left: 5px;
+    color: white;
 }
 
 .text-mobile {
     font-size: 11px;
     margin-left: 2px;
+    color: white;
 }
 
-.heading {
+.heading-web {
     font-weight: bold;
     text-align: left;
     align-self:left ;
-    align-content:flex-start
+    align-content:flex-start;
+    color:white;
 }
 
 .heading-mobile {
     font-weight: bold;
     font-size: 12;
     padding-bottom: 2;
+    color: white;
 }
 
 .follow-us {
@@ -106,3 +110,4 @@
     margin: 3px 2px;
     gap: 3;
 }
+

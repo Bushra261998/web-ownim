@@ -29,7 +29,7 @@ export default function Footer() {
                 <Image src={footerImage} alt="Footer Logo" style={{height:isMobile?30:50,width:isMobile?60:100,justifySelf:'center',marginBottom:isMobile?12:0,}} />
             </div>
              
-            <div  className="footerBody" style={{gap:isMobile?2:50}}>
+            <div  className="footerBody" style={{gap:2}}>
 
             <div className={ isMobile?"services-mobile":"services"} >
                 <div  className={isMobile?"heading-mobile" : "heading"}>{FooterContent.servicesTxt}</div>
@@ -53,28 +53,28 @@ export default function Footer() {
                 <p className={isMobile?"detailed-text-mobile" :"detailed-text"} ><Link href={"/contact"}>{FooterContent.contactLink}</Link></p>
             </div>
 
-            <div className={ isMobile?"services-mobile":"services"} style={{marginLeft:isMobile?ColSize+20:ColSize,marginRight:isMobile?0:5 }}>
+            <div className={ isMobile?"services-mobile":"services"} style={{marginLeft:isMobile?ColSize+20:ColSize,marginRight:isMobile?0:20 }}>
                 <div className={isMobile?"heading-mobile" : "heading"}>Contact Us</div>
 
                 <div className={isMobile?"contact-info-mobile": "contact-info"}>
                     <FaRegEnvelope  size={isMobile?16:18} color="white"  className={isMobile?"icon-mobile":"icon"} />
-                    <p className={isMobile? "text-mobile": "text"}  >{isMobile?"ownim.corporation\n@gmail.com":FooterContent.email}</p>
+                    <p className={isMobile? "text-mobile": "text-web"}  >{isMobile?"ownim.corporation\n@gmail.com":FooterContent.email}</p>
                 </div>
     
                 <div className={isMobile?"contact-info-mobile": "contact-info" } >
                     <IoCallOutline size={isMobile?16:18} color="white" className={isMobile?"icon-mobile":"icon"} />
-                    <p className={isMobile? "text-mobile": "text"}  >{FooterContent.number}</p>
+                    <p className={isMobile? "text-mobile": "text-web"}  >{FooterContent.number}</p>
                 </div>
                 <div className={isMobile?"contact-info-mobile": "contact-info"}>
                     <PiBuildingOfficeThin size={isMobile?16:18} color="white"  className={isMobile?"icon-mobile":"icon"} />
-                    <p className={isMobile? "text-mobile": "text"}>{FooterContent.site}</p>
+                    <p className={isMobile? "text-mobile": "text-web"}>{FooterContent.site}</p>
                 </div>
                 </div>
 
             </div>
 
             <div  style={{display:'flex', flexDirection:'row', justifyContent:'center'}}>
-                <div className={isMobile?"heading-mobile " : "heading"}  style= {isMobile? {marginTop:14,marginRight:10}:{}}>{FooterContent.followUsTxt}</div>
+                <div className={isMobile?"heading-mobile " : "heading-web"}  style= {{marginTop:14,marginRight:10}}>{FooterContent.followUsTxt}</div>
                 <div className="follow-us">
                     <AiOutlineFacebook size={18} color="white" onClick={()=>router.push(`https://www.facebook.com/profile.php?id=100066951983156`)} />
                     <FaInstagram size={18} color="white"  />
