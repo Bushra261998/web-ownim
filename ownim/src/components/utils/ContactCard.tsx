@@ -4,10 +4,8 @@ import { AiOutlineGlobal } from "react-icons/ai";
 import { MdHome } from "react-icons/md";
 import styles from '../../styles/ContactCard.module.css';
 import { ContactCardContent } from './ScreensContent';
-import { useIsMobile } from './DevicePlatform';
 
 function ContactCard({ colorTheme }:{colorTheme:{textColor:string}}) {
-  const isMobile = useIsMobile();
   return (
     <div className={styles.container}>
       <h3 style={{ color: colorTheme.textColor }} className={styles.heading}>

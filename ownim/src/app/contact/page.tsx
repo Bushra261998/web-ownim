@@ -4,14 +4,12 @@ import Footer from "../../components/utils/Footer";
 import { ContactUsContent } from "../../components/utils/ScreensContent";
 import ContactCard from "../../components/utils/ContactCard";
 import styles from "../../styles/ContactUsScreen.module.css"; // Custom CSS module
-import useWindowSize from "@/components/utils/WindowSize";
 import Image from "next/image";
 import '../../styles/AboutScreen.css';
 import { useIsMobile } from "@/components/utils/DevicePlatform";
 
 export default function ContactUsScreen() {
   const isMobile = useIsMobile();
-  const size = useWindowSize().height-555;
   return (
     <div>
     <div className={styles.container}>

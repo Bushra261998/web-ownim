@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import Navbar from "@/components/Navigation/Navbar";
 import IsMobileDevice from "@/components/utils/DevicePlatform";
 import FinalNavbar from "@/components/Navigation/FinalNavbar";
 export const metadata: Metadata = {
