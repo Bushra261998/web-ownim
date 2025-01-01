@@ -1,17 +1,17 @@
+"use client"
 import React from 'react'
 import '../../styles/AboutScreen.css'; // Add a CSS file for styling
 import Footer from '../../components/utils/Footer'
 import { AboutUs } from '../../components/utils/ScreensContent';
 import Image from 'next/image';
 import aboutus from '../../../public/aboutus.png'
+import { useIsMobile } from '@/components/utils/DevicePlatform';
 
-
-
-export default function about() {
-  
+export default function About() {
+    const isMobile =useIsMobile();
     return (
         <>
-      <div className="container-about"  >
+      <div className="container-about" style={{width:isMobile?'100%':'80%'}} >
           <div className="header">
               <h1 className="header-text1">INITIAL BRIEF</h1>
               <h2 className="header-text2">ABOUT OUR COMPANY</h2>
