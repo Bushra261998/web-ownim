@@ -182,7 +182,7 @@ export default function Page() {
 
       <div className="footer-section" style={{display:'flex',backgroundColor:'#f5f5f5', fontSize:18, flexDirection:isMobile?'column':'row', marginTop:30, marginBottom:30, width:'100%'}} >
         <div style={{width:isMobile?'100%':'70%'}} >
-        <h2 style={{fontWeight:'bold', paddingLeft:isMobile?5:30, color:'black' }} >
+        <h2 style={{fontWeight:'bold', paddingLeft:isMobile?5:30, color:'black', paddingTop:20 }} >
           {HomeScreenContent.thirdSubHeading}
         </h2>
         <p style={{justifyContent:'left', paddingLeft:isMobile?5:30,paddingRight:isMobile?5:20, color:'black' }} >{HomeScreenContent.thirdParagraph}</p>
