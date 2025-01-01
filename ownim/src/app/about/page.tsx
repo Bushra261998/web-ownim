@@ -11,26 +11,26 @@ export default function about() {
   
     return (
         <>
-      <div className="container"  >
+      <div className="container-about"  >
           <div className="header">
               <h1 className="header-text1">INITIAL BRIEF</h1>
               <h2 className="header-text2">ABOUT OUR COMPANY</h2>
           </div>
-          <hr className="line" />
+          <hr className="line-about" />
           <div style={{backgroundColor:'#f5f5f5'}}>
           <section>
               <h3 className="about-heading">{AboutUs.aboutUsHeading}</h3>
-              <p className="about-text">{AboutUs.aboutUsText}</p>
+              <p className="text-about-style">{AboutUs.aboutUsText}</p>
           </section>
           
           <section>
               <h3 className="heading">{AboutUs.ourVissionHeading}</h3>
-              <p className="text">{AboutUs.ourVissionText}</p>
+              <p className="text-about-style">{AboutUs.ourVissionText}</p>
           </section>
           
           <section>
               <h3 className="heading">{AboutUs.ourMissionHeading}</h3>
-              <p className="text">{AboutUs.ourMissionText}</p>
+              <p className="text-about-style">{AboutUs.ourMissionText}</p>
           </section>
           </div>
           
@@ -40,7 +40,7 @@ export default function about() {
               className="img"
               width={600}
               height={600}
-              style={{width:'100%'}}
+              style={{width:'100%',justifySelf:'center', alignSelf:'center'}}
           />
           
       </div>
