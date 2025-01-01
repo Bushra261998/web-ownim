@@ -5,10 +5,8 @@ import { AiFillProfile } from "react-icons/ai";
 import { usePathname } from "next/navigation";
 import ActionBarImage from "./ActionbarImage";
 import FadeMenu from '../utils/PopUpMenu'
-import { useIsMobile } from "../utils/DevicePlatform";
 
 const Navbar = () => {
-  const isMobile =useIsMobile();
   const currentPath = usePathname();
   return (
     <>
