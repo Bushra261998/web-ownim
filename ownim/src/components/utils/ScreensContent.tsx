@@ -195,7 +195,8 @@ export const ContactCardContent = {
 }
 
 export const FooterContent={
-  email:`ownim.corporation@gmail.com\n`,
+  email:
+`ownim.corporation@gmail.com\n`,
   number:`03182408747\n`,
   site:`site Karachi\n`,
   followUsTxt: `Follow Us`,
@@ -207,7 +208,7 @@ export const FooterContent={
   productText:`Products`,
   janitorialsLink: `Janitorial and Consumable Products`,
   leatherLink: `Premium Leather Product`,
-  stainlessteelLink:`Stainless Stell Products`,
+  stainlessteelLink:`Stainless Steel Products`,
   gravureLink: `Gravure Printing`,
   flexoLink:`Flexo printing`,
   offsetLink:`Offset Printing`,

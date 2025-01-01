@@ -9,10 +9,10 @@ const currentPath = usePathname();
 const router = useRouter();
 return(
 <MenuTrigger  >
-  <Button aria-label="Menu"><p style={{color:currentPath.includes("/services") ? "#e91e63":"black"}} >Services</p></Button>
+  <Button aria-label="Menu" style={{outline:'none'}} ><p style={{color:currentPath.includes("/services") ? "#e91e63":"black"}} >Services</p></Button>
   <Popover style={{maxHeight:'inherit', boxSizing:'border-box', overflow:'auto',padding:2, minWidth:150, outline:'none', zIndex:1, backgroundColor:'white' }} >
     <Menu>
-      <MenuItem onAction={() => router.push('/services/jenitorials') } > <Link href={"#"}>Jenitorials</Link> </MenuItem>
+      <MenuItem onAction={() => router.push('/services/jenitorials') }  > <Link href={"#"}>Jenitorials</Link> </MenuItem>
       <MenuItem onAction={() => router.push('/services/leather')}><Link href={"#"}>Leather</Link></MenuItem>
       <MenuItem onAction={() => router.push('/services/stainless')}><Link href={"#"}>Stainless Steel</Link></MenuItem>
       <MenuItem onAction={() => router.push('/services/flexo')}><Link href={"#"}>Flexo Printing</Link></MenuItem>

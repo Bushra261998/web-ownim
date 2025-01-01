@@ -1,4 +1,5 @@
 // pages/-app.js
+"use client"
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
 import Image from "next/image";
@@ -7,7 +8,11 @@ import img2 from '../../../public/img2.png'
 import img3 from '../../../public/img3.png'
 import img4 from '../../../public/img4.png'
 import img5 from '../../../public/img5.png'
+import { useIsMobile } from "./DevicePlatform";
+
+
 const NextJsCarousel = () => {
+    const isMobile = useIsMobile()
     return (
         <div>
             <Carousel showArrows={true} transitionTime={3000} infiniteLoop={true} autoPlay={true}  dynamicHeight={true}  showThumbs={false} > 
@@ -15,7 +20,7 @@ const NextJsCarousel = () => {
                     <Image
                         src={img1}
                         alt="image1"
-                        style={{height:500}}
+                        style={{height:isMobile?250:500}}
         
                     />
                     <p className="legend">
@@ -26,7 +31,7 @@ const NextJsCarousel = () => {
                     <Image
                         src={img2}
                         alt="image2"
-                        style={{height:500}}
+                        style={{height:isMobile?250:500}}
                     />
                     <p className="legend">
                        Flexo Printing 
@@ -36,7 +41,7 @@ const NextJsCarousel = () => {
                     <Image
                         src={img3}
                         alt="image3"
-                        style={{height:500}}
+                        style={{height:isMobile?250:500}}
                     />
                     <p className="legend">
                         Logistics
@@ -46,7 +51,7 @@ const NextJsCarousel = () => {
                     <Image
                         src={img4}
                         alt="image4"
-                        style={{height:500}}
+                        style={{height:isMobile?250:500}}
                     />
                     <p className="legend">
                         Offset Printing
@@ -56,7 +61,7 @@ const NextJsCarousel = () => {
                     <Image
                         src={img5}
                         alt="image5"
-                        style={{height:500}}
+                        style={{height:isMobile?250:500}}
                     />
                     <p className="legend">
                         Software Services

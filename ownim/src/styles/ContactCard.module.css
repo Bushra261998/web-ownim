@@ -17,6 +17,7 @@
     flex-direction: row;
     align-items: center;
     padding: 15px 0;
+    column-gap: 5;
   }
   
   .iconWrapper {
@@ -44,5 +45,6 @@
   
   .details {
     font-size: 15px;
+    color: black;
   }
   

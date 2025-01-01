@@ -4,6 +4,8 @@ import Image  from 'next/image'
 import Footer from './Footer'
 import useWindowSize from './WindowSize'
 import '../../styles/AboutScreen.css';
+import { useIsMobile } from './DevicePlatform'
+
 interface propsType{
 ScreenContent:{
 heading:string;
@@ -14,9 +16,11 @@ decs:string;
 }
 
 export default function ServicesLayout({ScreenContent}:propsType) {
-    const midPoint = useWindowSize().width/2;
-    const start = midPoint-540;
-    const end = midPoint+500;
+    const isMobile =useIsMobile();
+    const windowWidth = useWindowSize().width;
+    const midPoint = windowWidth/2;
+    const start = midPoint- 540;
+    const end = isMobile?windowWidth : midPoint+500;
     return (
             <div style={styles.container}  >
                 <p style={{...styles.heading,color:ScreenContent.colorTheme, justifySelf:'center' }}>{ScreenContent.heading}</p>
@@ -24,11 +28,11 @@ export default function ServicesLayout({ScreenContent}:propsType) {
                     {ScreenContent.img}
                 </div>
                 <div >
-                    <Image src={'/card-bg.png'} style={{...styles.imgTop,marginLeft:start}} alt='card-bg1' width={50} height={50}  />
-                    <p style={styles.decs} >
+                    {<Image src={'/card-bg.png'} style={{...styles.imgTop,marginLeft:isMobile? 0: start}} alt='card-bg1' width={50} height={50}  />}
+                    <p style={{...styles.decs,width:isMobile?'99%':1000, padding:isMobile?5:50}} >
                         {ScreenContent.decs}
                     </p>
-                    <Image src={'/card-bg2.png'}  style={{...styles.imgBottom,marginLeft:end, marginBottom:30}} alt='car-bg2' width={50} height={50}  />
+                    {<Image src={'/card-bg2.png'}  style={{...styles.imgBottom,marginLeft:end, marginBottom:30, justifySelf:isMobile?'right':''}} alt='car-bg2' width={50} height={50}  />}
                 </div>
                 <Footer />
             </div>
@@ -65,8 +69,7 @@ const styles ={
         fontSize: 18,
         backgroundColor:'#f5f5f5',
         justifySelf:'center',
-        width:1000,
-        padding:50
+        color:'black'
     },
     imgTop:{
         height:50,

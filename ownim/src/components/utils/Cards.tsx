@@ -16,7 +16,7 @@ interface propsType{
 export default function Card({ name, image, desc, url, borderColor }:propsType) {
 
   return (
-    <div className={styles.card} style={{ borderColor, width:300 }}  >
+    <div className={styles.card} style={{ borderColor, width:300, }}  >
       <Image src={image} alt={`${name} thumbnail`} className={styles.image}  style={{width:300, height:150}} />
 
       <div className={styles.nameContainer}>
